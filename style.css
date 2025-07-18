@@ -1,15 +1,25 @@
-/* Global Styles */
-body {
-  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-  line-height: 1.6;
+/* ===== GLOBAL STYLES ===== */
+:root {
+  --accent: #1A1F71;        /* Deep navy blue */
+  --accent-hover: #0f144a;
+  --background: #f4f6fa;
+  --text: #333;
+  --card-bg: #fff;
+  --border-color: #ddd;
+  --section-padding: 40px;
 }
 
-/* Header and Footer */
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.7;
+}
+
+/* ===== HEADER & FOOTER ===== */
 header,
 footer {
   text-align: center;
@@ -17,9 +27,9 @@ footer {
 }
 
 header h1 {
-  color: #1A1F71;
   font-size: 3rem;
-  margin-bottom: 0.2em;
+  color: var(--accent);
+  margin-bottom: 0.3em;
 }
 
 header .subtitle {
@@ -27,27 +37,71 @@ header .subtitle {
   color: #555;
 }
 
-/* Section Headings */
+footer {
+  font-size: 0.9rem;
+  color: #888;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-color);
+  margin-top: 60px;
+}
+
+/* ===== HEADINGS ===== */
 h2 {
-  color: #1A1F71;
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 8px;
-  margin-top: 40px;
+  color: var(--accent);
+  font-size: 1.5rem;
+  border-left: 5px solid var(--accent);
+  padding-left: 12px;
+  margin-top: 50px;
+  margin-bottom: 15px;
 }
 
-/* Project Cards */
-.project {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 10px;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
-}
-
-.project h3 {
-  color: #1A1F71;
+h3 {
+  color: var(--accent);
   margin-bottom: 10px;
+}
+
+/* ===== LINKS & BUTTONS ===== */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+a.button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 12px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ===== PROJECT CARDS ===== */
+.project {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(26, 31, 113, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.project:hover {
+  box-shadow: 0 6px 14px rgba(26, 31, 113, 0.12);
 }
 
 .project ul {
@@ -58,45 +112,36 @@ h2 {
 .project a {
   display: inline-block;
   margin-top: 10px;
-  margin-right: 10px;
-  color: #1A1F71;
-  font-weight: 500;
-  text-decoration: none;
-  border-bottom: 1px dashed #1A1F71;
-  transition: all 0.2s ease;
+  margin-right: 12px;
+  border-bottom: 1px dashed var(--accent);
 }
 
-.project a:hover {
-  color: #000;
-  border-color: #000;
+/* ===== SECTION LAYOUTS ===== */
+.section {
+  padding-top: var(--section-padding);
+  padding-bottom: var(--section-padding);
 }
 
-/* Buttons / Links */
-a.button {
-  display: inline-block;
-  background-color: #1A1F71;
-  color: #fff;
-  padding: 10px 16px;
+ul {
+  padding-left: 20px;
+}
+
+/* ===== REFERENCE LIST ===== */
+.reference-list {
+  list-style: none;
+  padding: 0;
+}
+
+.reference-list li {
+  margin-bottom: 25px;
+  padding: 15px;
+  background-color: #fff;
+  border-left: 4px solid var(--accent);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
   border-radius: 5px;
-  font-weight: bold;
-  margin-top: 10px;
-  transition: background-color 0.3s ease;
 }
 
-a.button:hover {
-  background-color: #000e5e;
-}
-
-/* Footer */
-footer {
-  font-size: 0.9rem;
-  color: #888;
-  margin-top: 60px;
-  padding-top: 20px;
-  border-top: 1px solid #ccc;
-}
-
-/* Responsive tweaks */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 600px) {
   body {
     padding: 15px;
@@ -107,10 +152,10 @@ footer {
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.25rem;
   }
 
   .project {
-    padding: 15px;
+    padding: 18px;
   }
 }
