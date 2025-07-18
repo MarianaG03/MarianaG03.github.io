@@ -26,13 +26,15 @@ body {
 .banner {
   position: relative;
   height: 250px;
-  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
-  background-size: cover;
-  background-position: center;
+  background-color: #1A1F71; /* Solid dark blue */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 10px;
-  overflow: hidden;
+  margin-bottom: 40px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
+
 
 .banner-text {
   position: absolute;
