@@ -67,6 +67,35 @@ footer {
   border-top: 1px solid var(--border-color);
   margin-top: 60px;
 }
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 12px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  margin-bottom: 30px;
+  border-radius: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar a {
+  color: var(--accent);
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.navbar a:hover {
+  color: var(--accent-hover);
+}
 
 /* ===== HEADINGS ===== */
 h2 {
@@ -78,3 +107,16 @@ h2 {
   margin-bottom: 15px;
   padding-left: 12px;
   border-left: 5px soli
+#projects {
+  background-color: #ffffff;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+#section-two {
+  background-color: #f0f3fb;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+
