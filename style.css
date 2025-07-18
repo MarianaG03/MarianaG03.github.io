@@ -18,6 +18,45 @@ body {
   padding: 20px;
   line-height: 1.7;
 }
+/* ===== HEADER BANNER ===== */
+.site-header {
+  margin-bottom: 50px;
+}
+
+.banner {
+  position: relative;
+  height: 250px;
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c'); /* Change to your own image if you want */
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  background-color: rgba(26, 31, 113, 0.7); /* subtle overlay */
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #fff;
+}
+
+.banner-text .subtitle {
+  font-size: 1.1rem;
+  margin-top: 8px;
+  color: #f0f0f0;
+}
 
 /* ===== HEADER & FOOTER ===== */
 header,
