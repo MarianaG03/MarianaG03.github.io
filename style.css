@@ -26,7 +26,7 @@ body {
 .banner {
   position: relative;
   height: 250px;
-  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c'); /* Change to your own image if you want */
+  background-image: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c');
   background-size: cover;
   background-position: center;
   border-radius: 10px;
